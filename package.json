@@ -1,11 +1,30 @@
 {
-  "name": "contracts",
+  "name": "@vite-micro-front/contracts",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "type": "module",
+  "repository": {
+    "url": "https://github.com/vite-micro-front/contracts.git"
   },
-  "author": "Evgeny Paromov",
-  "license": "ISC"
+  "typesVersions": {
+    "*": {
+      "events": [
+        "./src/events.ts"
+      ],
+      "kernel": [
+        "./src/kernel.ts"
+      ],
+      "context": [
+        "./src/context.ts"
+      ]
+    }
+  },
+  "dependencies": {
+    "redux": "^5.0.1"
+  },
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "@types/redux": "^3.6.0"
+  }
 }
