@@ -1,11 +1,17 @@
 import { BoardId } from "./kernel";
 
 export type BoardDeletedEvent = {
-  type: "board/deleted";
-  version: 1;
+  type: "board/deleted/v1";
   payload: {
     boardId: BoardId;
   };
 };
 
-export type GlobalEvents = BoardDeletedEvent;
+export type BoardAddedEvent = {
+  type: "board/added/v1";
+  payload: {
+    boardId: BoardId;
+  };
+};
+
+export type GlobalEvents = BoardDeletedEvent | BoardAddedEvent;
